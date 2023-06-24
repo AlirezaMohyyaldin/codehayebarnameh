@@ -5,21 +5,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp123
+namespace projehaybarname
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            double x  = Convert.ToDouble(Console.ReadLine());
-            calc(x);
-            
-            
+            double midterm = Convert.ToDouble(Console.ReadLine()); 
+            double final = Convert.ToDouble(Console.ReadLine());
+            double show = calc(midterm, final);
+            Console.WriteLine(show);
         }
-        private static void calc(double x)
+       public static double calc(double x,double y)
         {
-            double resault = Math.Pow(x, 2) + (x * 2) - 4;
-            Console.WriteLine(resault);
+            double resault = 0.35 * x + 0.65 * y;
+            return resault;
         }
     }
 }
